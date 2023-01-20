@@ -1,2 +1,2 @@
-# fs-modmanager
+# FS ModManager
 Very Simple ModManager
