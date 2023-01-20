@@ -1,0 +1,11 @@
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\ModManager.exe.config
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\ModManager.exe
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\ModManager.pdb
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.csproj.AssemblyReference.cache
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.csproj.SuggestedBindingRedirects.cache
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.Form1.resources
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.Properties.Resources.resources
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.csproj.GenerateResource.cache
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.csproj.CoreCompileInputs.cache
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.exe
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.pdb
