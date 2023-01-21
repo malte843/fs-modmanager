@@ -340,7 +340,9 @@
             this.Controls.Add(this.btnSModFolder);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.MaximizeBox = false;
             this.Name = "Form2";
+            this.Sizable = false;
             this.Text = "FS ModManager";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
