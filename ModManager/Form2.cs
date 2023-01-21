@@ -1,22 +1,16 @@
-﻿using ModManager.Properties;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
+using MaterialSkin;
+using MaterialSkin.Controls;
+using ModManager.Properties;
 using System.Diagnostics;
-using System.Text.RegularExpressions;
-using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace ModManager
 {
-    public partial class Form1 : Form
+    public partial class Form2 : MaterialForm
     {
         private string modFolderPath = "";
         private string modPacksPath = "";
@@ -24,12 +18,18 @@ namespace ModManager
         private string selectedItem;
         private Boolean running = false;
         private Boolean reload = false;
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
+
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Blue400, Primary.Blue500, Primary.Blue500, Accent.Blue200, TextShade.WHITE);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
             if (startup)
             {
@@ -45,6 +45,7 @@ namespace ModManager
             }
         }
 
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (textBox3.Text.Trim() != "")
@@ -52,7 +53,8 @@ namespace ModManager
                 running = true;
                 textBox3.Enabled = false;
                 bgwCreatePack.RunWorkerAsync();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Name cant be empty");
             }
@@ -117,7 +119,7 @@ namespace ModManager
             }
         }
 
-        private void btnSModfolder_Click(object sender, EventArgs e)
+        private void btnSModFolder_Click(object sender, EventArgs e)
         {
             CommonOpenFileDialog dialog = new CommonOpenFileDialog();
             dialog.InitialDirectory = modFolderPath;
@@ -172,7 +174,8 @@ namespace ModManager
                         FileName = "explorer.exe"
                     };
                     Process.Start(startInfo);
-                } catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -187,7 +190,8 @@ namespace ModManager
                 btnLoad.Enabled = true;
                 btnDelete.Enabled = true;
                 btnShow.Enabled = true;
-            } else
+            }
+            else
             {
                 selectedItem = "";
                 btnLoad.Enabled = false;
@@ -197,6 +201,7 @@ namespace ModManager
         }
 
         int tickCount = 0;
+        Boolean hasRun = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (reload)
@@ -204,34 +209,44 @@ namespace ModManager
                 ReloadModpacks();
                 reload = false;
             }
-                
+
 
             // Loading... | / - \ 
             if (running)
             {
-                label4.Visible = true;
+                if (!hasRun)
+                    hasRun = true;
+                lblLoading.Visible = true;
                 if (tickCount == 0)
                 {
-                    label4.Text = "Copying Files... |";
+                    lblLoading.Text = "Copying Files... |";
                     tickCount = 1;
                 }
                 else if (tickCount == 1)
                 {
-                    label4.Text = "Copying Files... /";
+                    lblLoading.Text = "Copying Files... /";
                     tickCount = 2;
                 }
                 else if (tickCount == 2)
                 {
-                    label4.Text = "Copying Files... -";
+                    lblLoading.Text = "Copying Files... -";
                     tickCount = 3;
-                } else
+                }
+                else
                 {
-                    label4.Text = "Copying Files... \\";
+                    lblLoading.Text = "Copying Files... \\";
                     tickCount = 0;
                 }
-            } else
-            {
-                label4.Visible = false;
+            }
+            else
+            { 
+                if (hasRun)
+                {
+                    lblLoading.Text = "Done.";
+                } else
+                {
+                    lblLoading.Visible = false;
+                }
             }
         }
 
@@ -365,11 +380,6 @@ namespace ModManager
             foreach (System.IO.FileInfo file in target.GetFiles()) file.Delete();
             foreach (System.IO.DirectoryInfo subDirectory in target.GetDirectories()) subDirectory.Delete(true);
             CopyDirLoadPack(source, target);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            bgwCopyTest.RunWorkerAsync();
         }
 
         private void bgwLoadPack_ProgressChanged(object sender, ProgressChangedEventArgs e)

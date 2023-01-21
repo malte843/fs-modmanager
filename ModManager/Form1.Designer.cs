@@ -47,6 +47,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.bgwCopyTest = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // listBox1
@@ -56,7 +58,7 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(12, 121);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(539, 224);
+            this.listBox1.Size = new System.Drawing.Size(539, 204);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -167,12 +169,16 @@
             // 
             // bgwCreatePack
             // 
+            this.bgwCreatePack.WorkerReportsProgress = true;
             this.bgwCreatePack.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwCreatePack_DoWork);
+            this.bgwCreatePack.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwCreatePack_ProgressChanged);
             this.bgwCreatePack.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwCreatePack_RunWorkerCompleted);
             // 
             // bgwLoadPack
             // 
+            this.bgwLoadPack.WorkerReportsProgress = true;
             this.bgwLoadPack.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwLoadPack_DoWork);
+            this.bgwLoadPack.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwLoadPack_ProgressChanged);
             this.bgwLoadPack.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwLoadPack_RunWorkerCompleted);
             // 
             // timer1
@@ -185,7 +191,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(572, 335);
+            this.label4.Location = new System.Drawing.Point(557, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(153, 20);
             this.label4.TabIndex = 13;
@@ -214,12 +220,26 @@
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 331);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(539, 24);
+            this.progressBar1.TabIndex = 16;
+            // 
+            // bgwCopyTest
+            // 
+            this.bgwCopyTest.WorkerReportsProgress = true;
+            this.bgwCopyTest.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwCopyTest_DoWork);
+            this.bgwCopyTest.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgwCopyTest_ProgressChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(737, 364);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label4);
@@ -267,6 +287,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.ComponentModel.BackgroundWorker bgwCopyTest;
     }
 }
 

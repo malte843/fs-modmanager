@@ -9,3 +9,15 @@ D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.csproj.GenerateR
 D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.csproj.CoreCompileInputs.cache
 D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.exe
 D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.dll
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.xml
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.csproj.CopyComplete
+D:\dev\projects\c#\ModManager\ModManager\obj\Release\ModManager.Form2.resources
+D:\dev\projects\c#\ModManager\ModManager\bin\Release\MaterialSkin.dll

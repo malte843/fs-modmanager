@@ -9,3 +9,15 @@ D:\dev\projects\c#\ModManager\ModManager\obj\Debug\ModManager.csproj.GenerateRes
 D:\dev\projects\c#\ModManager\ModManager\obj\Debug\ModManager.csproj.CoreCompileInputs.cache
 D:\dev\projects\c#\ModManager\ModManager\obj\Debug\ModManager.exe
 D:\dev\projects\c#\ModManager\ModManager\obj\Debug\ModManager.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.dll
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.xml
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\dev\projects\c#\ModManager\ModManager\obj\Debug\ModManager.csproj.CopyComplete
+D:\dev\projects\c#\ModManager\ModManager\obj\Debug\ModManager.Form2.resources
+D:\dev\projects\c#\ModManager\ModManager\bin\Debug\MaterialSkin.dll
